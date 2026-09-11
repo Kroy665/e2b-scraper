@@ -2,11 +2,13 @@
   "name": "e2b_scraper",
   "version": "1.0.0",
   "description": "TypeScript project",
+  "type": "module",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
+    "scrape": "tsx src/pdf-scraper.ts",
     "test": "jest",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\""
@@ -24,6 +26,11 @@
     "prettier": "^3.8.4",
     "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "e2b": "^2.29.0"
   }
 }
